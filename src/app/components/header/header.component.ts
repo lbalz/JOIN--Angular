@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  logoIconSrc: string = './assets/icons/default/header_logo.svg';
+  helpIconSrc: string = './assets/icons/default/help.svg';
 }

@@ -10,7 +10,7 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.component';
 
 export const routes: Routes = [
-    {path: '', redirectTo: '/lgoin', pathMatch: 'full'},
+    {path: '', redirectTo: '/login', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
     {path: 'signup', component: SignupComponent},
     {path: 'summary', component: SummaryComponent},
