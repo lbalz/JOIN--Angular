@@ -8,6 +8,8 @@
     <main>
         <div class="signup-container">
             <div class="signup-title">
+                <a [routerLink]="['/login']" class="back-to-login"></a>
+
                 <h1>Sign up</h1>
             </div>
 
@@ -46,6 +48,24 @@
                         <img class="lock-icon" [src]="formConfig.icons.lock" alt="">
                     </div>
                     <span class="error-msg">Check your email and password. Please try again.</span>
+
+                    <div class="privacy-policy-check">
+                        <div class="checkbox-container">
+                            <img 
+                            [src]="privacyPolicyCheckboxImgSrc" 
+                            (click)="toggleCheckbox()"
+                            alt="">
+                            <input type="checkbox" class="privacy-policy-checkbox" formControlName="checkbox">
+                        </div>
+
+                        <div class="checkbox-plain-text-container">
+                            <span>I accept the </span>
+                        </div>
+
+                        <div class="checkbox-link-container">
+                            <a [routerLink]="['/privacy-policy']">Privacy Policy</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="button-container">
