@@ -197,6 +197,12 @@
                         &:hover {
                             background-color: var(--secondary-color);
                         }
+
+                        &:active {
+                            background-color: var(--white);
+                            border: 1px solid var(--secondary-color);
+                            color: var(--secondary-color);
+                        }
                     }
 
                     .guest-btn {
@@ -210,6 +216,12 @@
                         &:hover {
                             border-color: var(--secondary-color);
                             color: var(--primary-color);
+                        }
+
+                        &:active {
+                            background-color: var(--white);
+                            border-color: var(--black);
+                            color: var(--black);
                         }
                     }
                 }
