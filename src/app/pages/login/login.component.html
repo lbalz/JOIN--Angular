@@ -16,18 +16,51 @@
     </header>
 
     <main>
-        <div>
-            <p>test</p>
+        <div class="login-container">
+            <div class="login-title">
+                <h1>Log in</h1>
+            </div>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-wrapper">
+                    <div class="form-group">
+                        <input 
+                        type="email"
+                        formControlName="email"
+                        placeholder="Email">
+                        <img class="mail-icon" src="./assets/icons/default/mail.svg" alt="">
+                    </div>
+
+                    <div class="form-group">
+                        <input 
+                        type="password"
+                        formControlName="password"
+                        placeholder="Password">
+                        <img class="lock-icon" src="./assets/icons/default/lock.svg" alt="">
+                    </div>
+                    <span class="error-msg">Check your email and password. Please try again.</span>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="login-btn">
+                        Log in
+                    </button>
+
+                    <button type="button" class="guest-btn" (click)="onGuestLogin()">
+                        Guest log in
+                    </button>
+                </div>
+            </form>
         </div>
     </main>
 
     <footer>
-        <div>
-            <p>Privacy Policy</p>
+        <div class="footer-links">
+            <a [routerLink]="['/privacy-policy']">Privacy Policy</a>
         </div>
 
-        <div>
-            <p>Legal Notice</p>
+        <div class="footer-links">
+            <a [routerLink]="['/legal-notice']">Legal Notice</a>
         </div>
     </footer>
 
